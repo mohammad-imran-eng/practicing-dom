@@ -28,3 +28,8 @@ document.getElementById('name').addEventListener('click',()=> {
     document.getElementById('d-text').innerText = 'My wife name is Sirajam Munira';
 })
 
+document.getElementById('btn-update').addEventListener('click',()=> {
+    const inputText = document.getElementById('input-text').value
+    document.getElementById('text-update').innerText = inputText;
+    document.getElementById('input-text').value = '';
+})
