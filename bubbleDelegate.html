@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble Delegate</title>
+</head>
+<body>
+
+    <ul id="item-container">
+        <li class="item">item1</li>
+        <li class="item">item2</li>
+        <li class="item">item3</li>
+        <li class="item">item4</li>
+        <li class="item">item5</li>
+        <li class="item">item6</li>
+    </ul>
+
+    <button id="add-item">Add Item</button>
+
+
+
+    <script>
+        // const items = document.getElementsByClassName('item')
+        // for (const item of items){
+        //     item.addEventListener('click',(e)=> {
+        //         e.target.parentNode.removeChild(e.target)
+        //     })
+        // }
+
+        document.getElementById('item-container').addEventListener('click',(e)=> {
+            e.target.parentNode.removeChild(e.target)
+        })
+
+        document.getElementById('add-item').addEventListener('click',()=> {
+           const li = document.createElement('li');
+           li.innerText = 'new text added here'
+           document.getElementById('item-container').appendChild(li)
+        })
+
+
+      
+    </script>
+
+    
+</body>
+</html>
